@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barra Bahia Revista - Agência de Publicidade e Marketplace</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="tooplate-living-parallax.css">
+<!--
+
+Barra Bahia Revista - Agência de Publicidade e Marketplace
+
+Template baseado no Tooplate 2150 Living Parallax
+
+https://www.tooplate.com/view/2150-living-parallax
+
+Adaptado para Barra Bahia Revista
+
+-->
+</head>
+<body>
+    <!-- UI Toggle Button - Always Visible -->
+    <button class="ui-toggle-btn" id="uiToggleBtn" aria-label="Toggle UI Visibility">
+        <svg viewBox="0 0 24 24" id="eyeIcon">
+            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+            <circle cx="12" cy="12" r="3"/>
+        </svg>
+    </button>
+
+    <!-- Header -->
+    <header class="ui-element">
+        <div class="logo">BARRA BAHIA REVISTA</div>
+        <nav id="mainNav">
+            <a onclick="openOverlay('about')">Sobre</a>
+            <a onclick="openOverlay('services')">Serviços</a>
+            <a onclick="openOverlay('contact')">Contato</a>
+            <button class="fullscreen-btn" id="fullscreenBtn" aria-label="Alternar Tela Cheia">
+                <svg viewBox="0 0 24 24">
+                    <path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"/>
+                </svg>
+            </button>
+        </nav>
+        <div class="menu-toggle" id="menuToggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </header>
+
+    <!-- Slider -->
+    <div class="slider-wrapper">
+        <div class="slider-container" id="slider">
+            <!-- Slide 1 -->
+            <div class="slide active" data-index="0">
+                <div class="parallax-layer background-layer">
+                    <img src="images/mountain-dreams.jpg" alt="Mountains">
+                </div>
+                <div class="image-info ui-element">
+                    <h2>Mountain Dreams</h2>
+                    <p>Where earth touches the sky in perfect harmony, creating breathtaking vistas</p>
+                </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="slide" data-index="1">
+                <div class="parallax-layer background-layer">
+                    <img src="images/forest-whispers.jpg" alt="Forest">
+                </div>
+                <div class="image-info ui-element">
+                    <h2>Forest Whispers</h2>
+                    <p>Nature's secrets hidden in emerald depths, where tranquility meets adventure</p>
+                </div>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="slide" data-index="2">
+                <div class="parallax-layer background-layer">
+                    <img src="images/ocean-serenity.jpg" alt="Ocean">
+                </div>
+                <div class="image-info ui-element">
+                    <h2>Ocean Serenity</h2>
+                    <p>Endless horizons where waves meet wonder, painting the perfect escape</p>
+                </div>
+            </div>
+
+            <!-- Slide 4 -->
+            <div class="slide" data-index="3">
+                <div class="parallax-layer background-layer">
+                    <img src="images/golden-hour.jpg" alt="Sunset">
+                </div>
+                <div class="image-info ui-element">
+                    <h2>Golden Hour</h2>
+                    <p>When the world glows with magical light, transforming every moment</p>
+                </div>
+            </div>
+
+            <!-- Slide 5 -->
+            <div class="slide" data-index="4">
+                <div class="parallax-layer background-layer">
+                    <img src="images/spring-bloom.jpg" alt="Flowers">
+                </div>
+                <div class="image-info ui-element">
+                    <h2>Spring Bloom</h2>
+                    <p>Life awakens in vibrant colors, celebrating nature's renewal</p>
+                </div>
+            </div>
+
+            <!-- Slide 6 -->
+            <div class="slide" data-index="5">
+                <div class="parallax-layer background-layer">
+                    <img src="images/desert-vastness.jpg" alt="Desert">
+                </div>
+                <div class="image-info ui-element">
+                    <h2>Desert Vastness</h2>
+                    <p>Endless dunes sculpted by wind and time, a landscape of pure beauty</p>
+                </div>
+            </div>
+
+            <!-- Slide 7 -->
+            <div class="slide" data-index="6">
+                <div class="parallax-layer background-layer">
+                    <img src="images/waterfall-majesty.jpg" alt="Waterfall">
+                </div>
+                <div class="image-info ui-element">
+                    <h2>Waterfall Majesty</h2>
+                    <p>Cascading power and grace, where water carves its eternal path</p>
+                </div>
+            </div>
+
+            <!-- Slide 8 -->
+            <div class="slide" data-index="7">
+                <div class="parallax-layer background-layer">
+                    <img src="images/wild-encounters.jpg" alt="Wildlife">
+                </div>
+                <div class="image-info ui-element">
+                    <h2>Wild Encounters</h2>
+                    <p>Nature's inhabitants in their pristine habitat, untamed and free</p>
+                </div>
+            </div>
+
+            <!-- Slide 9 -->
+            <div class="slide" data-index="8">
+                <div class="parallax-layer background-layer">
+                    <img src="images/summit-glory.jpg" alt="Mountain Peak">
+                </div>
+                <div class="image-info ui-element">
+                    <h2>Summit Glory</h2>
+                    <p>Standing above the clouds, where adventure meets achievement</p>
+                </div>
+            </div>
+
+            <!-- Navigation -->
+            <div class="nav-arrow prev ui-element">‹</div>
+            <div class="nav-arrow next ui-element">›</div>
+
+            <!-- Dots -->
+            <div class="dots-container ui-element">
+                <span class="dot active" data-slide="0"></span>
+                <span class="dot" data-slide="1"></span>
+                <span class="dot" data-slide="2"></span>
+                <span class="dot" data-slide="3"></span>
+                <span class="dot" data-slide="4"></span>
+                <span class="dot" data-slide="5"></span>
+                <span class="dot" data-slide="6"></span>
+                <span class="dot" data-slide="7"></span>
+                <span class="dot" data-slide="8"></span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Global Parallax Shapes -->
+    <div class="parallax-shape shape-1 ui-element"></div>
+    <div class="parallax-shape shape-2 ui-element"></div>
+
+    <!-- Play/Pause Button -->
+    <button class="play-pause-btn ui-element" id="playPauseBtn" aria-label="Play/Pause Slideshow">
+        <svg viewBox="0 0 24 24">
+            <path d="M6 4h4v16H6V4zm8 0h4v16h-4V4z"/>
+        </svg>
+    </button>
+
+    <!-- Progress Bar -->
+    <div class="progress-bar-container ui-element">
+        <div class="progress-bar" id="progressBar"></div>
+    </div>
+
+    <!-- Duration Controls -->
+    <div class="duration-controls ui-element">
+        <button class="duration-btn" id="decreaseDuration" aria-label="Decrease Duration">−</button>
+        <div class="duration-display" id="durationDisplay">5<span>s</span></div>
+        <button class="duration-btn" id="increaseDuration" aria-label="Increase Duration">+</button>
+    </div>
+
+    <!-- About Overlay -->
+    <div class="overlay" id="aboutOverlay">
+        <div class="overlay-content">
+            <button class="close-btn" onclick="closeOverlay('about')">×</button>
+            <h2>Sobre Nós</h2>
+            <p>Bem-vindo à Barra Bahia Revista, sua plataforma completa de publicidade, marketplace e serviços variados na região da Baía de Todos os Santos.</p>
+            <p>Nossa missão é conectar empresas, profissionais e clientes através de soluções inovadoras de publicidade, comércio eletrônico e serviços especializados. Oferecemos uma experiência imersiva e interativa para promover negócios e facilitar transações comerciais.</p>
+            <p>Com nossa plataforma, você encontra produtos, serviços, imóveis, informações locais e muito mais, tudo em um só lugar.</p>
+            <p>Na Barra Bahia Revista, acreditamos no potencial da região e buscamos impulsionar o desenvolvimento econômico local através de tecnologia e inovação.</p>
+            <p>Barra Bahia Revista é a sua ponte entre oportunidades e resultados.</p>
+        </div>
+    </div>
+
+    <!-- Testimonials Overlay -->
+    <!-- Services Overlay -->
+    <div class="overlay" id="servicesOverlay">
+        <div class="overlay-content">
+            <button class="close-btn" onclick="closeOverlay('services')">×</button>
+            <h2>Nossos Serviços</h2>
+            <p>A Barra Bahia Revista oferece uma ampla gama de serviços para atender às necessidades do seu negócio e da sua comunidade:</p>
+            
+            <h3>Publicidade e Marketing</h3>
+            <p>Anúncios em revista digital e impressa, campanhas publicitárias, divulgação de eventos e promoções.</p>
+            
+            <h3>Marketplace</h3>
+            <p>Plataforma online para compra e venda de produtos e serviços locais, com entrega na região da Baía de Todos os Santos.</p>
+            
+            <h3>Imobiliária</h3>
+            <p>Compra, venda e locação de imóveis residenciais e comerciais na região da Baía de Todos os Santos.</p>
+            
+            <h3>Informativo Local</h3>
+            <p>Notícias, eventos, dicas e informações relevantes sobre a região para manter a comunidade sempre atualizada.</p>
+            
+            <h3>Documentação</h3>
+            <p>Serviços de regularização de documentos, consultoria jurídica e assessoria administrativa.</p>
+            
+            <h3>Outros Serviços</h3>
+            <p>Consultoria empresarial, design gráfico, desenvolvimento web, fotografia e filmagem profissional.</p>
+        </div>
+    </div>
+
+    <!-- Contact Overlay -->
+    <div class="overlay" id="contactOverlay">
+        <div class="overlay-content">
+            <button class="close-btn" onclick="closeOverlay('contact')">×</button>
+            <h2>Contact Us</h2>
+            <p>Have a question or want to collaborate? We'd love to hear from you. Fill out the form below and we'll get back to you as soon as possible.</p>
+            
+            <form class="contact-form" onsubmit="handleSubmit(event)">
+                <label>Name</label>
+                <input type="text" name="name" placeholder="Your name" required>
+                
+                <label>Email</label>
+                <input type="email" name="email" placeholder="your.email@example.com" required>
+                
+                <label>Subject</label>
+                <input type="text" name="subject" placeholder="What's this about?" required>
+                
+                <label>Message</label>
+                <textarea name="message" placeholder="Tell us more..." required></textarea>
+                
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+            
+            <div class="contact-address">
+                <h3>Visit Us</h3>
+                <p>123 Gallery Street, Art District<br>
+                San Francisco, CA 94102<br>
+                United States<br>
+                <a href="tel:+14155551234">+1 (415) 555-1234</a> | <a href="mailto:hello@livingparallax.com">hello@livingparallax.com</a></p>
+            </div>
+            
+            <div class="map-container">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.019720565487!2d-122.41941548468169!3d37.77492997975916!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085809c6c8f4459%3A0xb10ed6d9b5050fa5!2sTwitter%20HQ!5e0!3m2!1sen!2sus!4v1635959045789!5m2!1sen!2sus" 
+                    width="100%" 
+                    height="400" 
+                    style="border:0; border-radius: 12px; opacity: 0.9;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade"
+                    class="overlay-map">
+                </iframe>
+            </div>
+        </div>
+    </div>
+
+    <!-- Privacy Overlay -->
+    <div class="overlay" id="privacyOverlay">
+        <div class="overlay-content">
+            <button class="close-btn" onclick="closeOverlay('privacy')">×</button>
+            <h2>Privacy Policy</h2>
+            <p>At Parallax Gallery, we are committed to protecting your privacy and ensuring the security of your personal information. This Privacy Policy outlines how we collect, use, and safeguard your data when you visit our website.</p>
+            
+            <p><strong>Information We Collect:</strong> We may collect personal information such as your name, email address, and any other details you provide when contacting us through our website forms. We also collect non-personal information such as browser type, IP address, and pages visited for analytics purposes.</p>
+            
+            <p><strong>How We Use Your Information:</strong> The information we collect is used to respond to your inquiries, improve our website experience, and send occasional updates about our gallery (only if you've opted in). We never sell, trade, or rent your personal information to third parties.</p>
+            
+            <p><strong>Data Security:</strong> We implement industry-standard security measures to protect your personal information from unauthorized access, disclosure, or misuse. All form submissions are transmitted securely.</p>
+            
+            <p><strong>Cookies:</strong> Our website may use cookies to enhance user experience and track website analytics. You can disable cookies in your browser settings, though this may affect certain website functionalities.</p>
+            
+            <p><strong>Third-Party Services:</strong> We use Unsplash for image hosting, which may have its own privacy policies. We recommend reviewing their terms if you have concerns about image content.</p>
+            
+            <p><strong>Your Rights:</strong> You have the right to access, correct, or delete any personal information we hold about you. To exercise these rights, please contact us through our contact form.</p>
+            
+            <p><strong>Changes to This Policy:</strong> We may update this Privacy Policy from time to time. Any changes will be posted on this page with an updated revision date.</p>
+            
+            <p>If you have any questions about this Privacy Policy, please don't hesitate to contact us.</p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="ui-element">
+        <p>Copyright © 2026 Barra Bahia Revista | <a href="#" onclick="openOverlay('privacy'); return false;">Privacidade</a> | Design: <a href="https://www.tooplate.com" target="_blank">Tooplate</a></p>
+    </footer>
+<script src="tooplate-living-scripts.js"></script>
+</body>
+</html>
