@@ -1,1 +1,24 @@
-# Barra Bahia Revista\n\nWebsite da Barra Bahia Revista - Agência de Publicidade e Marketplace\n\n## Sobre\n\nO site Barra Bahia Revista é uma plataforma completa de publicidade, marketplace e serviços variados na região da Baía de Todos os Santos.\n\n## Funcionalidades\n\n- Efeitos de paralaxe interativos\n- Slideshow automático\n- Seções de sobreposição para informações\n- Design responsivo\n\n## Tecnologias\n\n- HTML5\n- CSS3\n- JavaScript\n\n## Licença\n\nEste projeto está licenciado como Código Aberto.
+# Barra Bahia Revista
+
+Website oficial da Barra Bahia Revista - Agência de Publicidade e Marketplace
+
+## Sobre
+
+O site Barra Bahia Revista é uma plataforma completa de publicidade, marketplace e serviços variados na região da Baía de Todos os Santos.
+
+## Funcionalidades
+
+- Efeitos de paralaxe interativos
+- Slideshow automático
+- Seções de sobreposição para informações
+- Design responsivo
+
+## Tecnologias
+
+- HTML5
+- CSS3
+- JavaScript
+
+## Licença
+
+Este projeto está licenciado como Código Aberto.
