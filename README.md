@@ -4,7 +4,7 @@ Website oficial da Barra Bahia Revista - Agência de Publicidade e Marketplace
 
 ## Sobre
 
-O site Barra Bahia Revista é uma plataforma completa de publicidade, marketplace e serviços variados na região da Baía de Todos os Santos.
+O site Barra Bahia Revista é uma plataforma completa de publicidade, marketplace e serviços variados na cidade de Barra Bahia e região.
 
 ## Funcionalidades
 
