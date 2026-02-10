@@ -12,12 +12,17 @@ O site Barra Bahia Revista é uma plataforma completa de publicidade, marketplac
 - Slideshow automático
 - Seções de sobreposição para informações
 - Design responsivo
+- Integração com redes sociais
 
-## Tecnologias
+## Tecnologias Utilizadas
 
 - HTML5
 - CSS3
 - JavaScript
+
+## Contato
+
+Siga-nos no Instagram: https://www.instagram.com/barra_bahia_revista?igsh=OGQ5ZDc2ODk2ZA%3D%3D
 
 ## Licença
 
