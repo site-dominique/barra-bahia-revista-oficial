@@ -423,7 +423,8 @@ nav a::after {
 	z-index: 1;
 }
 
-.background-layer img {
+.background-layer img,
+.background-layer video {
 	width: 110%;
 	height: 110%;
 	object-fit: cover;
