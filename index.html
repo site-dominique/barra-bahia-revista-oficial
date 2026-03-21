@@ -210,43 +210,121 @@ Adaptado para Barra Bahia Revista
 if ('serviceWorker' in navigator) {
     window.addEventListener('load', () => {
         navigator.serviceWorker.register('/sw.js')
-            .then(reg => console.log('SW registrado:', reg))
-            .catch(err => console.log('SW erro:', err));
+            .then(reg => console.log('✅ SW registrado:', reg))
+            .catch(err => console.log('❌ SW erro:', err));
     });
 }
 
-// Install Prompt - Mostrar automaticamente no celular
+// Install Prompt - Melhorado
 let deferredPrompt;
-const minDisplayTime = 3000; // Tempo mínimo antes de mostrar
+let installShown = false;
 
 window.addEventListener('beforeinstallprompt', (e) => {
+    console.log('📱 beforeinstallprompt disparado!');
     e.preventDefault();
     deferredPrompt = e;
     
-    // Mostrar prompt automaticamente após 3 segundos
-    setTimeout(() => {
-        // Verificar se é dispositivo móvel
-        const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-        
-        if (isMobile && deferredPrompt) {
-            // Mostrar confirmação primeiro
-            if (confirm('📱 Deseja instalar o app da Barra Bahia Revista?')) {
-                deferredPrompt.prompt();
-                deferredPrompt.userChoice.then((choiceResult) => {
-                    if (choiceResult.outcome === 'accepted') {
-                        console.log('Usuário aceitou instalar o app');
-                    }
-                    deferredPrompt = null;
-                });
-            }
-        }
-    }, minDisplayTime);
+    // Criar botão flutuante de instalar
+    if (!installShown) {
+        installShown = true;
+        showInstallButton();
+    }
 });
+
+function showInstallButton() {
+    // Criar botão de instalar
+    const installBtn = document.createElement('div');
+    installBtn.id = 'pwa-install-btn';
+    installBtn.innerHTML = `
+        <div class="pwa-install-content">
+            <span>📱 Instalar app da Barra Bahia Revista</span>
+            <button id="pwa-install-yes">Instalar</button>
+            <button id="pwa-install-no">Agora não</button>
+        </div>
+    `;
+    installBtn.style.cssText = `
+        position: fixed;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: linear-gradient(135deg, rgba(100, 150, 255, 0.95) 0%, rgba(50, 100, 200, 0.9) 100%);
+        padding: 16px 24px;
+        border-radius: 16px;
+        box-shadow: 0 10px 40px rgba(0,0,0,0.4);
+        z-index: 99999;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        animation: slideUp 0.3s ease;
+    `;
+    
+    const style = document.createElement('style');
+    style.textContent = `
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateX(-50%) translateY(20px); }
+            to { opacity: 1; transform: translateX(-50%) translateY(0); }
+        }
+        .pwa-install-content {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: white;
+            font-family: 'Poppins', sans-serif;
+        }
+        .pwa-install-content button {
+            padding: 8px 16px;
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            font-family: 'Poppins', sans-serif;
+        }
+        #pwa-install-yes {
+            background: white;
+            color: #4a90d9;
+        }
+        #pwa-install-no {
+            background: rgba(255,255,255,0.2);
+            color: white;
+        }
+    `;
+    document.head.appendChild(style);
+    document.body.appendChild(installBtn);
+    
+    // Botão Instalar
+    document.getElementById('pwa-install-yes').addEventListener('click', () => {
+        if (deferredPrompt) {
+            deferredPrompt.prompt();
+            deferredPrompt.userChoice.then((choiceResult) => {
+                console.log('Usuário escolheu:', choiceResult.outcome);
+                installBtn.remove();
+                deferredPrompt = null;
+            });
+        }
+    });
+    
+    // Botão Agora não
+    document.getElementById('pwa-install-no').addEventListener('click', () => {
+        installBtn.remove();
+        installShown = false;
+    });
+}
+
+// Tentar mostrar automaticamente após 3 segundos (só em mobile)
+setTimeout(() => {
+    const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    console.log('📱 É mobile?', isMobile, 'deferredPrompt?', !!deferredPrompt);
+    
+    if (isMobile && deferredPrompt && !installShown) {
+        showInstallButton();
+    }
+}, 3000);
 
 // App instalado
 window.addEventListener('appinstalled', () => {
-    console.log('PWA instalado com sucesso!');
+    console.log('✅ PWA instalado com sucesso!');
     deferredPrompt = null;
+    installShown = false;
 });
 </script>
 </body>
