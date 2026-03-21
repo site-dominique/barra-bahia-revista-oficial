@@ -1694,3 +1694,55 @@ footer a:hover {
 		padding: 5px 10px;
 	}
 }
+
+/* ========================================
+   PWA Install Button
+   ======================================== */
+.pwa-install-btn {
+	position: fixed;
+	bottom: 30px;
+	left: 50%;
+	transform: translateX(-50%);
+	background: linear-gradient(135deg, rgba(100, 150, 255, 0.95) 0%, rgba(50, 100, 200, 0.9) 100%);
+	backdrop-filter: blur(10px);
+	border: 2px solid rgba(255, 255, 255, 0.3);
+	color: #fff;
+	padding: 14px 28px;
+	border-radius: 50px;
+	font-size: 1rem;
+	font-weight: 700;
+	font-family: 'Poppins', sans-serif;
+	cursor: pointer;
+	display: none;
+	align-items: center;
+	gap: 10px;
+	box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4),
+		0 0 20px rgba(100, 150, 255, 0.3);
+	transition: all 0.3s ease;
+	z-index: 10000;
+	text-transform: uppercase;
+	letter-spacing: 0.5px;
+}
+
+.pwa-install-btn:hover {
+	background: linear-gradient(135deg, rgba(100, 150, 255, 1) 0%, rgba(50, 100, 200, 1) 100%);
+	transform: translateX(-50%) translateY(-3px);
+	box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5),
+		0 0 30px rgba(100, 150, 255, 0.5);
+}
+
+.pwa-install-btn:active {
+	transform: translateX(-50%) translateY(-1px);
+}
+
+.pwa-install-btn svg {
+	flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+	.pwa-install-btn {
+		bottom: 20px;
+		padding: 12px 20px;
+		font-size: 0.9rem;
+	}
+}
